@@ -3,11 +3,11 @@ import config from "../config/config";
 export default function CallToAction() {
   const callToAction = {
     firstButton: {
-      url: "link:" + config.phoneNumber,
+      url: "tel:" + config.phoneNumber,
       text: config.phoneNumber,
     },
     secondButton: {
-      url: "/signup",
+      url: "#",
       text: "Sign Up",
     },
   };
@@ -15,7 +15,7 @@ export default function CallToAction() {
   return (
     <div className="hidden items-center gap-5 md:flex">
       {callToAction.firstButton.url && (
-        <a className="btn-primary" href={callToAction.firstButton.url}>
+        <a className="btn-primary md:hidden lg:block" href={callToAction.firstButton.url}>
           {callToAction.firstButton.text}
         </a>
       )}

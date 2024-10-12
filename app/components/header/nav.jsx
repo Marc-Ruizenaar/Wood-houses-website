@@ -7,10 +7,10 @@ import CallToAction from "../elements/CallToAction";
 
 export default function Nav() {
   const Links = [
-    { name: "Home", url: "/" },
-    { name: "Properties", url: "/properties" },
-    { name: "Our projects", url: "/projects" },
-    { name: "Market", url: "/market" },
+    { name: "Home", url: "#" },
+    { name: "Properties", url: "#" },
+    { name: "Our projects", url: "#" },
+    { name: "Market", url: "#" },
   ];
 
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -19,17 +19,21 @@ export default function Nav() {
     <div className="container mx-auto px-5">
       <header className="flex items-center justify-between gap-5 border-b-1 border-b-white/[0.4] py-5">
         {/* Desktop Menu */}
-        <nav className="hidden md:flex md:flex-row md:gap-5 md:bg-transparent md:text-white">
-          {Links.map((item, index) => (
-            <a key={index} href={item.url}>
-              {item.name}
-            </a>
-          ))}
-        </nav>
 
-        <a href="">
-          <Image src={config.logo} alt="" width={150} />
-        </a>
+        <div className="flex items-center gap-5">
+          <a href="#">
+            <span className="sr-only">Back to homepage</span>
+            <Image src={config.logo} alt="" width={150} />
+          </a>
+
+          <nav className="hidden md:flex md:flex-row md:gap-5 md:bg-transparent md:text-white">
+            {Links.map((item, index) => (
+              <a key={index} href={item.url}>
+                {item.name}
+              </a>
+            ))}
+          </nav>
+        </div>
 
         <CallToAction />
 

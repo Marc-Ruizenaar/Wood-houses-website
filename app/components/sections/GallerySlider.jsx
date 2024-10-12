@@ -93,6 +93,7 @@ export default function GallerySlider() {
             </h1>
             <p>{Slider[sliderIndex].p}</p>
             <a
+              aria-label={Slider[sliderIndex].buttonText}
               className="w-max rounded-full bg-white px-6 py-2 text-black"
               href={Slider[sliderIndex].buttonLink}
             >
@@ -120,6 +121,7 @@ export default function GallerySlider() {
         <div id="sliders" className="flex gap-5">
           {Slider.map((item, index) => (
             <button
+              aria-label={item.title}
               key={index}
               className="flex items-center justify-center rounded border-1 text-left backdrop-blur-md transition-transform duration-500 focus:scale-110 md:p-3"
               onClick={() => handleButtonClick(index)}

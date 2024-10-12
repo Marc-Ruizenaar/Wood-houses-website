@@ -2,6 +2,8 @@
 
 This is my first project using React (Next) and Tailwind CSS.
 
+https://dribbble.com/shots/24985262-Luxora-Real-Estate-Landing-Page
+
 # 🚀 What I Learned:
 
 - Structuring a React application
@@ -11,5 +13,4 @@ This is my first project using React (Next) and Tailwind CSS.
 # 🛠️ Areas for Improvement:
 
 - Seo imporvements
-- Improving accessibility for screen readers
 - Adding more components
