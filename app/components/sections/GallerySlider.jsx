@@ -88,10 +88,10 @@ export default function GallerySlider() {
           <div
             className={`flex w-full transform flex-col gap-5 px-5 transition-transform duration-500 md:w-7/12 ${slideOut ? "-translate-x-[200%]" : "translate-x-0"}`}
           >
-            <h1 className="text-3xl font-bold md:text-4xl">
+            <h1 className="text-3xl font-bold text-white md:text-4xl">
               {Slider[sliderIndex].header}
             </h1>
-            <p>{Slider[sliderIndex].p}</p>
+            <p className="text-white">{Slider[sliderIndex].p}</p>
             <a
               aria-label={Slider[sliderIndex].buttonText}
               className="w-max rounded-full bg-white px-6 py-2 text-black"
@@ -111,11 +111,11 @@ export default function GallerySlider() {
           <p>{String(sliderIndex + 1).padStart(2, "0")}</p>
           <div className="relative flex w-full md:w-auto">
             <span
-              className={`absolute top-1/2 z-10 h-1 w-${sliderIndex + 1}\/3 -translate-y-1/2 transform rounded bg-white transition-all`}
+              className={`absolute top-1/2 z-10 h-1 w-${sliderIndex + 1}\/3 -translate-y-1/2 transform rounded bg-white text-white transition-all`}
             ></span>
             <span className="h-1 w-full rounded bg-slate-400 md:w-80"></span>
           </div>
-          <p>03</p>
+          <p className="text-white">03</p>
         </div>
 
         <div id="sliders" className="flex gap-5">
