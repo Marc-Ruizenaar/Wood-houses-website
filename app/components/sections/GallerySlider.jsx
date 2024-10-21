@@ -108,7 +108,7 @@ export default function GallerySlider() {
           id="amount"
           className="flex items-center justify-between gap-4 md:justify-start"
         >
-          <p>{String(sliderIndex + 1).padStart(2, "0")}</p>
+          <p className="text-white">{String(sliderIndex + 1).padStart(2, "0")}</p>
           <div className="relative flex w-full md:w-auto">
             <span
               className={`absolute top-1/2 z-10 h-1 w-${sliderIndex + 1}\/3 -translate-y-1/2 transform rounded bg-white text-white transition-all`}
